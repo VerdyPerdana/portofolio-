@@ -108,7 +108,7 @@
     0 0 70px rgba(18, 247, 255, 0.6),
     0 0 80px rgba(18, 247, 255, 0.6),
     0 0 100px rgba(18, 247, 255, 0.6),
-    0 0 150px rgba(18, 247, 255, 0.6);;
+    0 0 150px rgba(18, 247, 255, 0.6);
 
   }
 
@@ -361,34 +361,87 @@
 
 
  /* ---------------------------services section css ---------------------------------*/
- .main-text{
-  width: 100%;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--hover-color);
- }
- .main-text h2{
-  color: #12f7ff;
-  font-weight: 700;
-  font-size: var(--normal-font);
- }
+ .services {
+  background: #fff;
+}
 
- .section-services{
+.services .main-text h2 {
+  color: #12f7ff;
+}
+
+.section-services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: stretch;
+}
+
+.section-services .service-box {
+  max-width: 320px;
+  width: 100%;
+  background: #250821;
+  color: #fff;
+  border-radius: 32px;
+  box-shadow: 0 6px 32px rgba(37,8,33,0.12), 0 1.5px 6px rgba(18,247,255,0.10);
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.section-services .service-box:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(18,247,255,0.18), 0 2px 8px rgba(37,8,33,0.15);
+}
+
+.section-services .service-box i.service-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  grid-gap: 2rem;
- }
+  font-size: 3.5rem;
+  margin-bottom: 1.2rem;
+}
 
- .section-services .service-box{
-  flex: 1 1 18rem;
-  padding: 2rem 1rem 2rem;
-  text-align: center;
-  background: var(--secon-bg-color);
-  position: transform .4s;
-  border-radius: 20px;
- }
+.section-services .service-box h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.section-services .service-box p {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.section-services .service-box .btn-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .section-services {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-services {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    max-width: 98vw;
+  }
+}
 
  .service-btn{
   width: auto;
@@ -476,28 +529,27 @@
  }
 
  .skill-bar .bar .html{
-  width: 80%;
+  width: 70%;
   animation: html 2s;
  }
 
  .skill-bar .bar .css{
-  width: 75%;
+  width: 70%;
   animation: css 3s;
  }
 
  .skill-bar .bar .flutter{
-  width: 60%;
+  width: 50%;
   animation: flutter 4s;
  }
 
  .skill-bar .bar .mikrotik{
-  width: 88%;
+  width: 50%;
   animation: mikrotik 5s;
-
  }
 
  .skill-bar .bar .cpt{
-  width: 85%;
+  width: 80%;
   animation: cpt 6s;
  }
 
@@ -800,7 +852,7 @@
     width: 0%
   }
   100%{
-    width: 80%;
+    width: 70%;
   }
 }
 
@@ -809,7 +861,7 @@
     width: 0%
   }
   100%{
-    width: 75%;
+    width: 70%;
   }
 }
 
@@ -818,7 +870,7 @@
     width: 0%
   }
   100%{
-    width: 60%;
+    width: 50%;
   }
 }
 @keyframes mikrotik{
@@ -826,7 +878,7 @@
     width: 0%
   }
   100%{
-    width: 88%;
+    width: 50%;
   }
 }
 @keyframes cpt{
@@ -834,7 +886,7 @@
     width: 0%
   }
   100%{
-    width: 85%;
+    width: 80%;
   }
 }
 @keyframes figma{
@@ -990,6 +1042,16 @@
   .img-about p{
     font-size: 1rem;
   }
+}
+
+.section-services .service-box {
+  background: #250821;
+  color: #fff;
+}
+
+.section-services .service-box h3,
+.section-services .service-box p {
+  color: #fff;
 }
 
 
